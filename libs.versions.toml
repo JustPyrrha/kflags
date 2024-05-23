@@ -1,0 +1,19 @@
+[versions]
+android = "8.3.0" # https://github.com/JetBrains/kotlin-web-site/blob/master/docs/topics/multiplatform/multiplatform-compatibility-guide.md
+changelog = "2.2.0" # https://github.com/JetBrains/gradle-changelog-plugin/releases
+dokka = "1.9.20" # https://github.com/Kotlin/dokka/releases
+githooks = "0.0.2" # https://github.com/jakemarsden/git-hooks-gradle-plugin/releases
+kotlin = "2.0.0" # https://github.com/JetBrains/kotlin/releases/
+licenser = "1.1.2" # https://github.com/YumiProject/yumi-gradle-licenser/tags
+spotless = "6.25.0" # https://central.sonatype.com/artifact/com.diffplug.spotless/spotless-plugin-gradle/versions
+
+[libraries]
+
+[plugins]
+android = { id = "com.android.library", version.ref = "android" }
+changelog = { id = "org.jetbrains.changelog", version.ref = "changelog" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+githooks = { id = "com.github.jakemarsden.git-hooks", version.ref = "githooks" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+licenser = { id = "dev.yumi.gradle.licenser", version.ref = "licenser" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
