@@ -17,7 +17,7 @@ import kotlin.test.assertEquals
 class ToSetTests {
     @Test
     fun shouldContainTheSameValues() {
-        val byteValues = listOf(TestFlagByte.A, TestFlagByte.E)
+        val byteValues = listOf(TestFlagByte.Unknown, TestFlagByte.D)
         assertEquals(byteValues.toSet(), byteValues.toFlagSet())
 
         val uByteValues = listOf(TestFlagUByte.A, TestFlagUByte.E)

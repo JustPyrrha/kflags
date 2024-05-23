@@ -18,7 +18,7 @@ import kotlin.test.assertEquals
 class ToEnumSetTests {
     @Test
     fun `should contain the same values`() {
-        val byteValues = listOf(TestFlagByte.A, TestFlagByte.E)
+        val byteValues = listOf(TestFlagByte.Unknown, TestFlagByte.D)
         assertEquals(EnumSet.copyOf(byteValues), byteValues.toEnumSet())
 
         val uByteValues = listOf(TestFlagUByte.A, TestFlagUByte.E)

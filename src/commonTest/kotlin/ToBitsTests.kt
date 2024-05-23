@@ -27,13 +27,13 @@ class ToBitsTests {
 
     @Test
     fun shouldContainAllSetBits() {
-        assertEquals(0x14, TestFlagByte.of(TestFlagByte.D, TestFlagByte.F).toBits())
-        assertEquals(0x14u, TestFlagUByte.of(TestFlagUByte.D, TestFlagUByte.F).toBits())
-        assertEquals(0x14, TestFlagShort.of(TestFlagShort.D, TestFlagShort.F).toBits())
-        assertEquals(0x14u, TestFlagUShort.of(TestFlagUShort.D, TestFlagUShort.F).toBits())
-        assertEquals(0x14, TestFlagInt.of(TestFlagInt.D, TestFlagInt.F).toBits())
-        assertEquals(0x14u, TestFlagUInt.of(TestFlagUInt.D, TestFlagUInt.F).toBits())
-        assertEquals(0x14, TestFlagLong.of(TestFlagLong.D, TestFlagLong.F).toBits())
-        assertEquals(0x14u, TestFlagULong.of(TestFlagULong.D, TestFlagULong.F).toBits())
+        assertEquals(0x14, TestFlagByte.of(TestFlagByte.C, TestFlagByte.E).toBits())
+        assertEquals(0x14u, TestFlagUByte.of(TestFlagUByte.C, TestFlagUByte.E).toBits())
+        assertEquals(0x14, TestFlagShort.of(TestFlagShort.C, TestFlagShort.E).toBits())
+        assertEquals(0x14u, TestFlagUShort.of(TestFlagUShort.C, TestFlagUShort.E).toBits())
+        assertEquals(0x14, TestFlagInt.of(TestFlagInt.C, TestFlagInt.E).toBits())
+        assertEquals(0x14u, TestFlagUInt.of(TestFlagUInt.C, TestFlagUInt.E).toBits())
+        assertEquals(0x14, TestFlagLong.of(TestFlagLong.C, TestFlagLong.E).toBits())
+        assertEquals(0x14u, TestFlagULong.of(TestFlagULong.C, TestFlagULong.E).toBits())
     }
 }

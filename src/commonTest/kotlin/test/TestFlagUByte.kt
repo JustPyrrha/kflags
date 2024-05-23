@@ -10,17 +10,18 @@ package test
 
 import gay.pyrrha.kflags.Flag
 import gay.pyrrha.kflags.Flags
+import gay.pyrrha.kflags.toFlagSet
 
 enum class TestFlagUByte(override val value: UByte) : Flag<UByte> {
-    A(0x00u),
-    B(0x01u),
-    C(0x02u),
-    D(0x04u),
-    E(0x08u),
-    F(0x10u);
+    Unknown(0x00u),
+    A(0x01u),
+    B(0x02u),
+    C(0x04u),
+    D(0x08u),
+    E(0x10u);
 
     companion object : Flags<UByte, TestFlagUByte> {
         override val all: Set<TestFlagUByte>
-            get() = TestFlagUByte.entries.toSet()
+            get() = TestFlagUByte.entries.toFlagSet()
     }
 }

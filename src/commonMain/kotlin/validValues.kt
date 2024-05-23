@@ -19,7 +19,7 @@ import kotlin.jvm.JvmName
 @JsName("validUByteValues")
 public inline fun <reified T> Flags<UByte, T>.validValues(): Set<T>
     where T: Flag<UByte>, T : Enum<T> =
-    all.filter { it.value != 0.toUByte() }.toSet()
+    all.filter { it.value != 0.toUByte() }.toFlagSet()
 
 /**
  * Obtain all discrete valid values for the [Byte] bitfield.
@@ -29,7 +29,7 @@ public inline fun <reified T> Flags<UByte, T>.validValues(): Set<T>
 @JsName("validByteValues")
 public inline fun <reified T> Flags<Byte, T>.validValues(): Set<T>
         where T: Flag<Byte>, T : Enum<T> =
-    all.filter { it.value != 0.toByte() }.toSet()
+    all.filter { it.value != 0.toByte() }.toFlagSet()
 
 /**
  * Obtain all discrete valid values for the [Short] bitfield.
@@ -39,7 +39,7 @@ public inline fun <reified T> Flags<Byte, T>.validValues(): Set<T>
 @JsName("validShortValues")
 public inline fun <reified T> Flags<Short, T>.validValues(): Set<T>
         where T: Flag<Short>, T : Enum<T> =
-    all.filter { it.value != 0.toShort() }.toSet()
+    all.filter { it.value != 0.toShort() }.toFlagSet()
 
 /**
  * Obtain all discrete valid values for the [UShort] bitfield.
@@ -49,7 +49,7 @@ public inline fun <reified T> Flags<Short, T>.validValues(): Set<T>
 @JsName("validUShortValues")
 public inline fun <reified T> Flags<UShort, T>.validValues(): Set<T>
         where T: Flag<UShort>, T : Enum<T> =
-    all.filter { it.value != 0.toUShort() }.toSet()
+    all.filter { it.value != 0.toUShort() }.toFlagSet()
 
 /**
  * Obtain all discrete valid values for the [Int] bitfield.
@@ -59,7 +59,7 @@ public inline fun <reified T> Flags<UShort, T>.validValues(): Set<T>
 @JsName("validIntValues")
 public inline fun <reified T> Flags<Int, T>.validValues(): Set<T>
         where T: Flag<Int>, T : Enum<T> =
-    all.filter { it.value != 0 }.toSet()
+    all.filter { it.value != 0 }.toFlagSet()
 
 /**
  * Obtain all discrete valid values for the [UInt] bitfield.
@@ -69,7 +69,7 @@ public inline fun <reified T> Flags<Int, T>.validValues(): Set<T>
 @JsName("validUIntValues")
 public inline fun <reified T> Flags<UInt, T>.validValues(): Set<T>
         where T: Flag<UInt>, T : Enum<T> =
-    all.filter { it.value != 0u }.toSet()
+    all.filter { it.value != 0u }.toFlagSet()
 
 /**
  * Obtain all discrete valid values for the [Long] bitfield.
@@ -79,7 +79,7 @@ public inline fun <reified T> Flags<UInt, T>.validValues(): Set<T>
 @JsName("validLongValues")
 public inline fun <reified T> Flags<Long, T>.validValues(): Set<T>
         where T: Flag<Long>, T : Enum<T> =
-    all.filter { it.value != 0L }.toSet()
+    all.filter { it.value != 0L }.toFlagSet()
 
 /**
  * Obtain all discrete valid values for the [ULong] bitfield.
@@ -89,4 +89,4 @@ public inline fun <reified T> Flags<Long, T>.validValues(): Set<T>
 @JsName("validULongValues")
 public inline fun <reified T> Flags<ULong, T>.validValues(): Set<T>
         where T: Flag<ULong>, T : Enum<T> =
-    all.filter { it.value != 0uL }.toSet()
+    all.filter { it.value != 0uL }.toFlagSet()
